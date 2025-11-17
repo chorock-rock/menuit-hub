@@ -115,13 +115,13 @@ const Grid = styled.div`
   }
 `
 
-const BenefitCard = styled.div`
+const BenefitCard = styled.div<{ $gradient?: string; $borderColor?: string }>`
   background: ${props => {
-    if (props.gradient === 'blue') {
+    if (props.$gradient === 'blue') {
       return `linear-gradient(to bottom right, rgba(59, 130, 246, 0.1), ${props.theme.colors.brand}1A)`;
-    } else if (props.gradient === 'yellow') {
+    } else if (props.$gradient === 'yellow') {
       return `linear-gradient(to bottom right, ${props.theme.colors.point}1A, rgba(250, 204, 21, 0.1))`;
-    } else if (props.gradient === 'green') {
+    } else if (props.$gradient === 'green') {
       return `linear-gradient(to bottom right, rgba(34, 197, 94, 0.1), ${props.theme.colors.brand}1A)`;
     } else {
       return `linear-gradient(to bottom right, rgba(168, 85, 247, 0.1), ${props.theme.colors.brand}1A)`;
@@ -130,11 +130,11 @@ const BenefitCard = styled.div`
   border-radius: 1rem;
   padding: 2rem;
   border: 2px solid ${props => {
-    if (props.borderColor === 'brand') {
+    if (props.$borderColor === 'brand') {
       return `${props.theme.colors.brand}4D`;
-    } else if (props.borderColor === 'point') {
+    } else if (props.$borderColor === 'point') {
       return `${props.theme.colors.point}4D`;
-    } else if (props.borderColor === 'green') {
+    } else if (props.$borderColor === 'green') {
       return 'rgba(34, 197, 94, 0.3)';
     } else {
       return 'rgba(168, 85, 247, 0.3)';
@@ -294,8 +294,8 @@ export default function Benefits() {
           {benefits.map((benefit, index) => (
             <BenefitCard
               key={index}
-              gradient={benefit.gradient}
-              borderColor={benefit.borderColor}
+              $gradient={benefit.gradient}
+              $borderColor={benefit.borderColor}
             >
               <CardBlur />
               <CardContent>
