@@ -120,19 +120,19 @@ const ServiceCard = styled.div`
   }
 `
 
-const CardBlur = styled.div`
+const CardBlur = styled.div<{ $brand?: boolean }>`
   position: absolute;
   top: 0;
   right: 0;
   width: 8rem;
   height: 8rem;
-  background: ${props => props.brand ? `${props.theme.colors.brand}1A` : `${props.theme.colors.point}1A`};
+  background: ${props => props.$brand ? `${props.theme.colors.brand}1A` : `${props.theme.colors.point}1A`};
   border-radius: 50%;
   filter: blur(2rem);
   transition: background 0.3s;
 
   ${ServiceCard}:hover & {
-    background: ${props => props.brand ? `${props.theme.colors.brand}33` : `${props.theme.colors.point}33`};
+    background: ${props => props.$brand ? `${props.theme.colors.brand}33` : `${props.theme.colors.point}33`};
   }
 `
 
@@ -157,15 +157,15 @@ const CardTitle = styled.h3`
   }
 `
 
-const CardText = styled.p`
+const CardText = styled.p<{ $marginBottom?: boolean }>`
   color: ${props => props.theme.colors.gray[700]};
   font-size: 1.125rem;
   line-height: 1.75;
-  margin-bottom: ${props => props.marginBottom ? '1rem' : '0'};
+  margin-bottom: ${props => props.$marginBottom ? '1rem' : '0'};
 `
 
-const StrongText = styled.strong`
-  color: ${props => props.brand ? props.theme.colors.brand : props.theme.colors.gray[900]};
+const StrongText = styled.strong<{ $brand?: boolean }>`
+  color: ${props => props.$brand ? props.theme.colors.brand : props.theme.colors.gray[900]};
 `
 
 const FeatureList = styled.ul`
@@ -210,13 +210,13 @@ export default function Service() {
 
         <Grid>
           <ServiceCard>
-            <CardBlur brand />
+            <CardBlur $brand />
             <CardContent>
               <Emoji>🎯</Emoji>
               <CardTitle>핵심 서비스</CardTitle>
-              <CardText marginBottom>
+              <CardText $marginBottom>
                 메뉴잇은 <StrongText>테이블 오더 + 매장 IoT + 운영 효율화</StrongText>를 중심으로 한
-                <StrongText brand> 하드웨어/소프트웨어 통합 솔루션</StrongText>입니다.
+                <StrongText $brand> 하드웨어/소프트웨어 통합 솔루션</StrongText>입니다.
               </CardText>
               <CardText>
                 메뉴잇 허브 파트너는 해당 지역의 사장님들에게 이 솔루션을 공급하며
@@ -233,7 +233,7 @@ export default function Service() {
               <FeatureList>
                 <FeatureItem>
                   <CheckIcon>✓</CheckIcon>
-                  <span>각 지역별 <StrongText brand>파트너</StrongText> 활동</span>
+                  <span>각 지역별 <StrongText $brand>파트너</StrongText> 활동</span>
                 </FeatureItem>
                 <FeatureItem>
                   <CheckIcon>✓</CheckIcon>
