@@ -87,15 +87,15 @@ const Card = styled.div`
   }
 `
 
-const CardText = styled.p<{ strong?: boolean; large?: boolean }>`
+const CardText = styled.p<{ $strong?: boolean; $large?: boolean }>`
   font-size: 1.125rem;
   color: ${props => props.theme.colors.gray[700]};
   line-height: 1.75;
-  font-weight: ${props => props.strong ? 700 : 400};
-  font-size: ${props => props.large ? '1.5rem' : '1.125rem'};
+  font-weight: ${props => (props.$strong ? 700 : 400)};
+  font-size: ${props => (props.$large ? '1.5rem' : '1.125rem')};
 
   @media (min-width: 1024px) {
-    font-size: ${props => props.large ? '1.75rem' : '1.25rem'};
+    font-size: ${props => (props.$large ? '1.75rem' : '1.25rem')};
   }
 `
 
@@ -206,9 +206,9 @@ export default function About() {
         <ContentWrapper>
           <Card>
             <CardText>
-              <CardText as="strong" large>메뉴잇 허브(MenuIt Hub)</CardText>는 기존 비즈니스에{' '}
-              <CardText as="strong" large style={{ color: '#EB442A' }}>메뉴잇 테이블오더 서비스</CardText>를 결합해
-              <CardText as="strong"> 추가 수익을 얻을 수 있도록 설계된 지역 기반 파트너 네트워크</CardText>입니다.
+              <CardText as="strong" $large>메뉴잇 허브(MenuIt Hub)</CardText>는 기존 비즈니스에{' '}
+              <CardText as="strong" $large style={{ color: '#EB442A' }}>메뉴잇 테이블오더 서비스</CardText>를 결합해
+              <CardText as="strong" $strong> 추가 수익을 얻을 수 있도록 설계된 지역 기반 파트너 네트워크</CardText>입니다.
             </CardText>
           </Card>
           
