@@ -223,13 +223,13 @@ const Dots = styled.div`
   gap: 0.75rem;
 `
 
-const Dot = styled.div`
+const Dot = styled.div<{ $delay?: string }>`
   width: 0.75rem;
   height: 0.75rem;
-  background: ${props => props.delay ? 'rgba(255, 255, 255, 0.8)' : 'white'};
+  background: ${props => props.$delay ? 'rgba(255, 255, 255, 0.8)' : 'white'};
   border-radius: 50%;
   animation: ${pulse} 2s ease-in-out infinite;
-  animation-delay: ${props => props.delay || '0s'};
+  animation-delay: ${props => props.$delay || '0s'};
 `
 
 export default function CTA() {
@@ -264,8 +264,8 @@ export default function CTA() {
         
         <Dots>
           <Dot />
-          <Dot delay="0.2s" />
-          <Dot delay="0.4s" />
+          <Dot $delay="0.2s" />
+          <Dot $delay="0.4s" />
         </Dots>
       </Container>
     </Section>

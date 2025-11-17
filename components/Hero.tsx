@@ -517,13 +517,13 @@ const Dots = styled.div`
   gap: 0.5rem;
 `
 
-const Dot = styled.div<{ delay?: number }>`
+const Dot = styled.div<{ $delay?: number }>`
   width: 0.5rem;
   height: 0.5rem;
   background: ${props => props.theme.colors.brand};
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
-  animation-delay: ${props => props.delay || 0}s;
+  animation-delay: ${props => props.$delay || 0}s;
 `
 
 export default function Hero() {
@@ -661,8 +661,8 @@ export default function Hero() {
         
         <Dots>
           <Dot />
-          <Dot delay={0.2} />
-          <Dot delay={0.4} />
+          <Dot $delay={0.2} />
+          <Dot $delay={0.4} />
         </Dots>
       </Container>
     </Section>
