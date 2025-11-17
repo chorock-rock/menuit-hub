@@ -87,7 +87,7 @@ const Card = styled.div`
   }
 `
 
-const CardText = styled.p`
+const CardText = styled.p<{ strong?: boolean; large?: boolean }>`
   font-size: 1.125rem;
   color: ${props => props.theme.colors.gray[700]};
   line-height: 1.75;
