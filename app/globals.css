@@ -6,10 +6,10 @@
   --border: rgba(255, 255, 255, 0.08);
   --text: #f8fafc;
   --muted: #94a3b8;
-  --mint: #4ade80;
-  --mint-soft: rgba(74, 222, 128, 0.15);
-  --peach: #f97316;
-  --peach-soft: rgba(249, 115, 22, 0.18);
+  --brand: #eb442a;
+  --brand-soft: rgba(235, 68, 42, 0.18);
+  --point: #ffbb00;
+  --point-soft: rgba(255, 187, 0, 0.2);
   --lavender: #a855f7;
   --lavender-soft: rgba(168, 85, 247, 0.2);
 }
@@ -22,7 +22,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, rgba(74, 222, 128, 0.08), transparent),
+  background: radial-gradient(circle at top, rgba(235, 68, 42, 0.08), transparent),
     radial-gradient(circle at 20% 20%, rgba(79, 70, 229, 0.12), transparent),
     var(--bg);
   color: var(--text);
@@ -64,7 +64,7 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--mint), #10b981);
+  background: linear-gradient(135deg, var(--brand), var(--point));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,9 +116,9 @@ body {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--mint), #2dd4bf);
-  color: #04110b;
-  box-shadow: 0 10px 30px rgba(45, 212, 191, 0.2);
+  background: linear-gradient(135deg, var(--brand), var(--point));
+  color: #140600;
+  box-shadow: 0 10px 30px rgba(235, 68, 42, 0.3);
 }
 
 .btn--secondary {
@@ -133,7 +133,7 @@ body {
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 15px 35px rgba(255, 187, 0, 0.35);
 }
 
 .btn--secondary:hover,
@@ -191,7 +191,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(120deg, var(--mint), #38bdf8, #a855f7);
+  background: linear-gradient(120deg, var(--brand), var(--point), #a855f7);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -296,14 +296,14 @@ body {
   color: var(--muted);
 }
 
-.card--mint .card__icon {
-  background: var(--mint-soft);
-  color: var(--mint);
+.card--brand .card__icon {
+  background: var(--brand-soft);
+  color: var(--brand);
 }
 
-.card--peach .card__icon {
-  background: var(--peach-soft);
-  color: var(--peach);
+.card--point .card__icon {
+  background: var(--point-soft);
+  color: var(--point);
 }
 
 .card--lavender .card__icon {
@@ -336,12 +336,12 @@ body {
   font-size: 0.95rem;
 }
 
-.stat--mint {
-  border-color: var(--mint-soft);
+.stat--brand {
+  border-color: var(--brand-soft);
 }
 
-.stat--peach {
-  border-color: var(--peach-soft);
+.stat--point {
+  border-color: var(--point-soft);
 }
 
 .stat--lavender {
@@ -386,16 +386,16 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--mint);
-  box-shadow: 0 0 15px var(--mint);
+  background: var(--brand);
+  box-shadow: 0 0 15px var(--brand);
 }
 
 .feed__roi {
   font-size: 0.85rem;
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
-  background: rgba(74, 222, 128, 0.15);
-  color: var(--mint);
+  background: rgba(235, 68, 42, 0.2);
+  color: var(--brand);
 }
 
 .feed__time {
@@ -445,14 +445,14 @@ body {
   margin-bottom: 1rem;
 }
 
-.step--mint .step__icon {
-  background: var(--mint-soft);
-  color: var(--mint);
+.step--brand .step__icon {
+  background: var(--brand-soft);
+  color: var(--brand);
 }
 
-.step--peach .step__icon {
-  background: var(--peach-soft);
-  color: var(--peach);
+.step--point .step__icon {
+  background: var(--point-soft);
+  color: var(--point);
 }
 
 .step--lavender .step__icon {
@@ -503,7 +503,7 @@ body {
 }
 
 .cta {
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.15), rgba(59, 130, 246, 0.15));
+  background: linear-gradient(135deg, rgba(235, 68, 42, 0.15), rgba(255, 187, 0, 0.15));
 }
 
 .cta__inner {

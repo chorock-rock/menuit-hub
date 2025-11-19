@@ -13,14 +13,14 @@ const features = [
     title: '스마트 파트너십',
     description: '지역별 핵심 매장과의 연결을 자동화합니다.',
     items: ['상권 데이터 기반 매칭', '온보딩 플레이북 제공', '성과 지표 대시보드'],
-    accent: 'mint',
+    accent: 'brand',
     icon: Shield,
   },
   {
     title: '운영 자동화',
     description: '디바이스 설치부터 정산까지 토탈 케어를 제공합니다.',
     items: ['설치 일정 자동 관리', '실시간 장애 알림', '정산 캘린더 연동'],
-    accent: 'peach',
+    accent: 'point',
     icon: Zap,
   },
   {
@@ -33,10 +33,10 @@ const features = [
 ]
 
 const stats = [
-  { label: '활성 파트너', value: '312명', accent: 'mint' },
-  { label: '월 평균 추가 매출', value: '₩7.8M', accent: 'peach' },
+  { label: '활성 파트너', value: '312명', accent: 'brand' },
+  { label: '월 평균 추가 매출', value: '₩7.8M', accent: 'point' },
   { label: '평균 설치 매장', value: '24곳', accent: 'lavender' },
-  { label: '파트너 만족도', value: '4.9 / 5.0', accent: 'mint' },
+  { label: '파트너 만족도', value: '4.9 / 5.0', accent: 'brand' },
 ]
 
 const trades = [
@@ -79,13 +79,13 @@ const steps = [
     title: '1. 전략 미팅',
     desc: '상권 진단과 목표 매출을 함께 정의합니다.',
     icon: FileText,
-    accent: 'mint',
+    accent: 'brand',
   },
   {
     title: '2. 설치 & 런칭',
     desc: '하드웨어 · 소프트웨어 · 교육까지 일괄 지원합니다.',
     icon: Shield,
-    accent: 'peach',
+    accent: 'point',
   },
   {
     title: '3. 성장 동반',
